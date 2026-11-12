@@ -1,32 +1,135 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffe4ef;
-  color: #333333;
-  margin: 30px;
+  font-family: "Arial Black", Arial, sans-serif;
+  background-color: #111111;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #d90000;
+  padding: 20px;
+  border-bottom: 6px solid #ffffff;
+}
+
+header h1 {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+nav a {
+  color: #ffffff;
+  background-color: #111111;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #d90000;
+}
+
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 25px;
+  padding: 30px;
+  flex: 1;
 }
 
-h1, h2 { color: #e86aa6; }
-
-h1 {
-  width: 100%;
-  text-align: center;
+h2 {
+  color: #d90000;
 }
 
 .section {
-  background-color: white;
+  background-color: #ffffff;
+  color: #111111;
   padding: 15px;
-  border-radius: 10px;
-  flex: 1 1 300px;
-  max-width: 420px;
+  border-left: 8px solid #d90000;
+  border-radius: 6px;
+  flex: 1 1 200px;
+  max-width: 300px;
+  min-width: 0;
   box-sizing: border-box;
 }
 
-.highlight { color: #c77dff; font-weight: bold; }
-#profile-photo { border-radius: 10px; border: 3px solid #ffb6d5; }
-table, th, td { border: 1px solid #999999; border-collapse: collapse; padding: 8px; }
-th { background-color: #f1e8ff; }
+.section:target {
+  outline: 3px solid #d90000;
+}
+
+#about {
+  flex: 2 1 300px;
+  max-width: 420px;
+}
+
+#gallery {
+  flex: 0 1 220px;
+  max-width: 220px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+#profile-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  border: 3px solid #d90000;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #d90000;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  border-top: 6px solid #ffffff;
+}
+
+.highlight {
+  color: #d90000;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #111111;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #d90000;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
