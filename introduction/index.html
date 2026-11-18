@@ -10,7 +10,7 @@
     h1, h2 { color: #1f4e99; }
     h2 { margin-top: 0; }
 
-    /* ---------- CSS Grid page layout ---------- */
+    /* ---------- CSS GRID: overall page layout ---------- */
     .page {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -30,17 +30,62 @@
     #links      { grid-area: links; }
     #gallery    { grid-area: gallery; }
 
-    .section { background-color: white; padding: 15px; border-radius: 10px; }
+    /* ---------- CSS FLEXBOX: layout inside the sections ---------- */
+    .section {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;            /* each card is a flex column */
+      flex-direction: column;
+    }
+
     .highlight { color: #2b6fd6; font-weight: bold; }
 
-    /* Gallery uses its own nested grid */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+    /* Hobbies as a row of "chips" */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    #profile-photo, .gallery-grid img {
-      width: 100%;
+    .chips li {
+      background-color: #cfe0fb;
+      color: #1f4e99;
+      padding: 8px 14px;
+      border-radius: 20px;
+    }
+
+    /* Links as a wrapping button row */
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .link-row a {
+      display: block;
+      background-color: #2b6fd6;
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+    }
+    .link-row a:hover { background-color: #1f4e99; }
+
+    /* Gallery as a flex row that wraps */
+    .gallery-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery-flex img {
+      flex: 1 1 150px;
+      max-width: 300px;
       height: auto;
       border-radius: 10px;
       border: 3px solid #2b6fd6;
@@ -110,7 +155,7 @@
 
     <div class="section" id="hobbies">
       <h2>Hobbies &amp; Interests</h2>
-      <ul>
+      <ul class="chips">
         <li>Biking</li>
         <li>Riding my motorcycle</li>
       </ul>
@@ -118,7 +163,7 @@
 
     <div class="section" id="links">
       <h2>Links</h2>
-      <ul>
+      <ul class="link-row">
         <li><a href="https://github.com/Zhenver-com" target="_blank">My GitHub profile</a></li>
         <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
         <li><a href="../home/index.html">Go to my home page</a></li>
@@ -127,7 +172,7 @@
 
     <div class="section" id="gallery">
       <h2>Picture Gallery</h2>
-      <div class="gallery-grid">
+      <div class="gallery-flex">
         <img id="profile-photo" src="Zhenver.jpeg" alt="Zhenver">
         <img src="Zhenver.jpeg" alt="Zhenver">
       </div>
