@@ -5,67 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Krissh Zhenver Macatuggal">
   <title>Zhen's Personal Profile</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #e8f1ff; color: #333333; margin: 30px; }
-    h1, h2 { color: #1f4e99; }
-    h2 { margin-top: 0; }
 
-    /* ---------- CSS Grid page layout ---------- */
-    .page {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "title     title"
-        "about     about"
-        "education experience"
-        "education hobbies"
-        "links     gallery";
-      gap: 20px;
-    }
-    .page > h1 { grid-area: title; margin: 0; }
-    #about      { grid-area: about; }
-    #education  { grid-area: education; }
-    #experience { grid-area: experience; }
-    #hobbies    { grid-area: hobbies; }
-    #links      { grid-area: links; }
-    #gallery    { grid-area: gallery; }
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="css/styles.css">
 
-    .section { background-color: white; padding: 15px; border-radius: 10px; }
-    .highlight { color: #2b6fd6; font-weight: bold; }
-
-    /* Gallery uses its own nested grid */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-    }
-    #profile-photo, .gallery-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      border: 3px solid #2b6fd6;
-      box-sizing: border-box;
-    }
-
-    table { width: 100%; }
-    table, th, td { border: 1px solid #999999; border-collapse: collapse; padding: 8px; }
-    th { background-color: #cfe0fb; }
-
-    /* Stack everything on small screens */
-    @media (max-width: 700px) {
-      .page {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "title"
-          "about"
-          "education"
-          "experience"
-          "hobbies"
-          "links"
-          "gallery";
-      }
-    }
-  </style>
+  <!-- CSS Grid -->
+  <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
 
@@ -109,7 +54,7 @@
     </div>
 
     <div class="section" id="hobbies">
-      <h2>Hobbies &amp; Interests</h2>
+      <h2>Hobbies & Interests</h2>
       <ul>
         <li>Biking</li>
         <li>Riding my motorcycle</li>
