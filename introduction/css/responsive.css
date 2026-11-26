@@ -1,0 +1,63 @@
+/* Tablet screens (900px and below) */
+@media (max-width: 900px) {
+  body {
+    padding: 18px;
+  }
+
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "about"
+      "education"
+      "experience"
+      "hobbies"
+      "links"
+      "gallery";
+    gap: 16px;
+  }
+
+  .photo-card img {
+    height: 240px;
+  }
+}
+
+/* Mobile screens (540px and below) */
+@media (max-width: 540px) {
+  body {
+    padding: 12px;
+  }
+
+  .hero-header,
+  .section {
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  .nav-flex,
+  .link-row,
+  .chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-flex a,
+  .link-row a {
+    text-align: center;
+  }
+
+  .photo-card {
+    flex: 1 1 100%;
+  }
+
+  .photo-card img {
+    height: auto;
+  }
+}
