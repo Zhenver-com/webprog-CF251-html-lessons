@@ -1,0 +1,19 @@
+.link-row {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.gallery-flex {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.gallery-flex img {
+  max-width: 240px;
+  height: auto;
+  display: block;
+}
