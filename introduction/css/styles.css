@@ -2,27 +2,50 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
+  color: #1e293b;
+  background-color: #f0f9ff;
 }
 
-.page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
+h1 {
+  color: #0369a1;
+  margin-top: 0;
+}
+
+h2 {
+  color: #0284c7;
+  margin-top: 0;
 }
 
 .section {
-  margin-bottom: 28px;
+  background-color: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 18px;
 }
 
 .highlight {
   font-weight: bold;
+  color: #0369a1;
+  background-color: #bae6fd;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-.chips {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  margin-bottom: 14px;
+}
+
+th,
+td {
+  border: 1px solid #93c5fd;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #bfdbfe;
+  color: #0c4a6e;
 }
