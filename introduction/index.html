@@ -5,124 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Krissh Zhenver Macatuggal">
   <title>Zhen's Personal Profile</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #e8f1ff; color: #333333; margin: 30px; }
-    h1, h2 { color: #1f4e99; }
-    h2 { margin-top: 0; }
 
-    /* ---------- CSS GRID: overall page layout ---------- */
-    .page {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "title     title"
-        "about     about"
-        "education experience"
-        "education hobbies"
-        "links     gallery";
-      gap: 20px;
-    }
-    .page > h1 { grid-area: title; margin: 0; }
-    #about      { grid-area: about; }
-    #education  { grid-area: education; }
-    #experience { grid-area: experience; }
-    #hobbies    { grid-area: hobbies; }
-    #links      { grid-area: links; }
-    #gallery    { grid-area: gallery; }
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="css/styles.css">
 
-    /* ---------- CSS FLEXBOX: layout inside the sections ---------- */
-    .section {
-      background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      display: flex;            /* each card is a flex column */
-      flex-direction: column;
-    }
+  <!-- CSS Flexbox -->
+  <link rel="stylesheet" href="css/flexbox.css">
 
-    .highlight { color: #2b6fd6; font-weight: bold; }
+  <!-- CSS Grid -->
+  <link rel="stylesheet" href="css/grid.css">
 
-    /* Hobbies as a row of "chips" */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .chips li {
-      background-color: #cfe0fb;
-      color: #1f4e99;
-      padding: 8px 14px;
-      border-radius: 20px;
-    }
-
-    /* Links as a wrapping button row */
-    .link-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .link-row a {
-      display: block;
-      background-color: #2b6fd6;
-      color: white;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-    }
-    .link-row a:hover { background-color: #1f4e99; }
-
-    /* Gallery as a flex row that wraps */
-    .gallery-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    .gallery-flex img {
-      flex: 1 1 150px;
-      max-width: 300px;
-      height: auto;
-      border-radius: 10px;
-      border: 3px solid #2b6fd6;
-      box-sizing: border-box;
-    }
-
-    table { width: 100%; }
-    table, th, td { border: 1px solid #999999; border-collapse: collapse; padding: 8px; }
-    th { background-color: #cfe0fb; }
-
-    /* Stack everything on small screens */
-    @media (max-width: 700px) {
-      .page {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "title"
-          "about"
-          "education"
-          "experience"
-          "hobbies"
-          "links"
-          "gallery";
-      }
-    }
-  </style>
+  <!-- Responsive Web Design -->
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
   <main class="page">
-    <h1>Personal Profile Web Page</h1>
+    <header class="hero-header">
+      <h1>Personal Profile Web Page</h1>
+      <p class="subtitle">Two Wheels, Open Roads & Web Development</p>
+      <nav aria-label="Page sections">
+        <ul class="nav-flex">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="section" id="about">
+    <section class="section" id="about">
       <h2>About Me (Krissh Zhenver Macatuggal)</h2>
-      <p>Hollaa!! I'm <span class="highlight">Zhen</span>! I am currently enrolled in the IT course.</p>
-    </div>
+      <p>
+        Hollaa!! I'm <span class="highlight">Zhen</span>! I am currently enrolled in the IT course,
+        balancing coding lessons with weekend rides on two wheels.
+      </p>
+    </section>
 
-    <div class="section" id="education">
+    <section class="section" id="education">
       <h2>Education / Achievements</h2>
       <table>
         <tr>
@@ -146,37 +68,47 @@
         <li>Graduated senior high school under the HUMSS strand</li>
         <li>Currently studying Information Technology</li>
       </ol>
-    </div>
+    </section>
 
-    <div class="section" id="experience">
+    <section class="section" id="experience">
       <h2>IT Experience</h2>
-      <p>I have <span class="highlight">no IT experience yet</span>, and I am excited to learn.</p>
-    </div>
+      <p>
+        I have <span class="highlight">no IT experience yet</span>, and I am excited to learn and build
+        responsive websites step by step.
+      </p>
+    </section>
 
-    <div class="section" id="hobbies">
-      <h2>Hobbies &amp; Interests</h2>
+    <section class="section" id="hobbies">
+      <h2>Hobbies & Interests</h2>
       <ul class="chips">
         <li>Biking</li>
         <li>Riding my motorcycle</li>
+        <li>Road Trips & Two-Wheel Exploration</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section" id="links">
+    <section class="section" id="links">
       <h2>Links</h2>
       <ul class="link-row">
         <li><a href="https://github.com/Zhenver-com" target="_blank">My GitHub profile</a></li>
         <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
         <li><a href="../home/index.html">Go to my home page</a></li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section" id="gallery">
+    <section class="section" id="gallery">
       <h2>Picture Gallery</h2>
       <div class="gallery-flex">
-        <img id="profile-photo" src="Zhenver.jpeg" alt="Zhenver">
-        <img src="Zhenver.jpeg" alt="Zhenver">
+        <figure class="photo-card">
+          <img src="Zhenver.jpeg" alt="Zhenver with motorcycle">
+          <figcaption>Two-Wheel Ride</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="Zhenvermotor.jfif" alt="Zhenver motorcycle">
+          <figcaption>Motorcycle Setup</figcaption>
+        </figure>
       </div>
-    </div>
+    </section>
   </main>
 
 </body>
