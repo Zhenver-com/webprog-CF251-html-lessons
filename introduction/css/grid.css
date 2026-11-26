@@ -1,0 +1,41 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "header    header"
+    "about     about"
+    "education experience"
+    "education hobbies"
+    "links     gallery";
+  gap: 20px;
+}
+
+.hero-header {
+  grid-area: header;
+}
+
+#about {
+  grid-area: about;
+}
+
+#education {
+  grid-area: education;
+}
+
+#experience {
+  grid-area: experience;
+}
+
+#hobbies {
+  grid-area: hobbies;
+}
+
+#links {
+  grid-area: links;
+}
+
+#gallery {
+  grid-area: gallery;
+}
