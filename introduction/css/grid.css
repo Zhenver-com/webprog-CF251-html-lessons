@@ -1,0 +1,63 @@
+/* ---------- CSS Grid page layout ---------- */
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "title     title"
+    "about     about"
+    "education experience"
+    "education hobbies"
+    "links     gallery";
+  gap: 20px;
+}
+
+.page > h1 {
+  grid-area: title;
+  margin: 0;
+}
+
+#about {
+  grid-area: about;
+}
+
+#education {
+  grid-area: education;
+}
+
+#experience {
+  grid-area: experience;
+}
+
+#hobbies {
+  grid-area: hobbies;
+}
+
+#links {
+  grid-area: links;
+}
+
+#gallery {
+  grid-area: gallery;
+}
+
+/* Gallery uses its own nested grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+/* Stack everything on small screens */
+@media (max-width: 700px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "about"
+      "education"
+      "experience"
+      "hobbies"
+      "links"
+      "gallery";
+  }
+}
